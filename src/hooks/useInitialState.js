@@ -77,8 +77,8 @@ const useInitialState = () => {
     setUsers(users.filter(user => user.id !== curUser.id));
     deleteUser(curUser.id)
       .then((response) => {
-        setMessage({ title: "User deleted successfully. ", message: "Status: " + response, active: true })
         handleCurUserInitialize()
+        setMessage({ title: "User deleted successfully. ", message: "Status: " + response, active: true })
       })
       .catch(error => {
         console.log(error)
