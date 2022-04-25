@@ -4,7 +4,7 @@ import { AppSettings } from '../config/AppSettings'
 
 const UserForm = () => {
   const { handleUploadUser, curUser, handleCurUserInitialize } = useContext(AppSettings)
-  const { register, setValue, handleSubmit, watch, formState: { errors } } = useForm()
+  const { register, setValue, handleSubmit, formState: { errors } } = useForm()
   const onSubmit = data => {
     handleUploadUser(data)
     handleCurUserInitialize()
