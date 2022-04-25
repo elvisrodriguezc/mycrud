@@ -18,10 +18,10 @@ const UserItem = (props) => {
         <div className='col-md-3'>
           <div className="d-flex flex-row justify-content-around mt-2">
             <div>
-              <a className='action' onClick={props.updateUser} title='edit'><i className='fa fa-pencil fa-xl text-success'></i> </a>
+              <button className='action' onClick={props.updateUser} title='edit'><i className='fa fa-pencil fa-xl text-success'></i> </button>
             </div>
             <div>
-              <a onClick={props.eraseUser} title="erase" data-bs-toggle="modal" data-bs-target="#eraseAlert"><i className='fa fa-trash fa-xl text-danger'></i> </a>
+              <button onClick={props.eraseUser} title="erase" data-bs-toggle="modal" data-bs-target="#eraseAlert"><i className='fa fa-trash fa-xl text-danger'></i> </button>
             </div>
           </div>
         </div>

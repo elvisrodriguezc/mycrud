@@ -10,13 +10,16 @@ const UserForm = () => {
     handleCurUserInitialize()
   }
   useEffect(() => {
-    if (!curUser.isDeleting) {
-      setValue('email', curUser.userData.email)
-      setValue('password', curUser.userData.password)
-      setValue('first_name', curUser.userData.first_name)
-      setValue('last_name', curUser.userData.last_name)
-      setValue('birthday', curUser.userData.birthday)
+    const formValuesUpdate = () => {
+      if (!curUser.isDeleting) {
+        setValue('email', curUser.userData.email)
+        setValue('password', curUser.userData.password)
+        setValue('first_name', curUser.userData.first_name)
+        setValue('last_name', curUser.userData.last_name)
+        setValue('birthday', curUser.userData.birthday)
+      }
     }
+    formValuesUpdate()
   }, [curUser])
 
   // console.log(watch('email'))
